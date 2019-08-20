@@ -14,4 +14,7 @@ dependencies {
     implementation(group: 'org.vividus', name: 'vividus', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-web-app', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-rest-api', version: vividusVersion)
+    implementation(group: 'org.vividus', name: 'vividus-plugin-db', version: vividusVersion)
+
+    implementation(group: 'org.postgresql', name: 'postgresql', version: '42.2.5')
 }
