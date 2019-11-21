@@ -8,3 +8,6 @@ Vividus starter purpose is to help you start developing automation Vividus Frame
 4. Execute command `./gradlew build eclipse` or `./gradlew build idea` to build for your favorite IDE;
 5. Import project into IDE;
 6. Have fun !!!
+
+Support:
+[**Slack chat**](https://vividus-support.herokuapp.com/)
