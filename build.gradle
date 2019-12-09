@@ -1,5 +1,5 @@
 project.description = 'Vividus test starter'
-group = 'org.vividus'
+group = 'org.vividus.starter'
 
 ext.buildSystemPath = "${buildSystemRootDir}/${buildSystemVersion}"
 ext.buildSystemDir = file("${buildSystemPath}")
