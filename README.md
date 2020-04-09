@@ -21,7 +21,7 @@ The purpose of this repository is to help users start creating automated tests u
 ## Eclipse
 1. Go to the root directory of the test project
 1. Execute command: `./gradlew eclipse`
-1. [Import project to Eclipse](https://help.eclipse.org/2018-12/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm)
+1. [Import project to Eclipse](https://help.eclipse.org/2020-03/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm)
 
 
 # Support:
