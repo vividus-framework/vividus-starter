@@ -1,7 +1,7 @@
 project.description = 'Vividus test starter'
 group = 'org.vividus.starter'
 
-ext.buildSystemPath = "${buildSystemRootDir}/${buildSystemVersion}"
+ext.buildSystemPath = "${System.env.BUILD_SYSTEM_ROOT?:buildSystemRootDir}/${buildSystemVersion}"
 ext.buildSystemDir = file("${buildSystemPath}")
 
 apply from: "${buildSystemPath}/vividus-test-project.gradle"
