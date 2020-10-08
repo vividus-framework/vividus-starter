@@ -15,7 +15,6 @@ The purpose of this repository is to help users start creating automated tests u
     - Choose option to make your repository `Public` or `Private` (`Private` is recommended from start, it can be changed in future)
 1. Clone your newly generated repository: `git clone --recursive your_generated_project_link.git`
 1. Go to the local directory with your cloned repository: `cd your_repository_name`
-1. Clone build system: `git clone --recursive https://github.com/vividus-framework/vividus-build-system.git`
 
 # How to import the project to IDE
 ## Eclipse
