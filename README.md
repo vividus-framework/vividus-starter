@@ -37,7 +37,7 @@ The purpose of this repository is to help users start creating automated tests u
 1. Start a webserver of your choice, in the example below we are using a node webserver through port 3456
     ```shell
     ✔ ~/dir/to/where/the/results-are-published/.out/vividus-demo/reports/allure
-16:42 $ http-server -p 3456
+    $ http-server -p 3456
     ```
 1. launch a browser, type localhost:3456 into the URL. If you followed the instructions perperly, you should see your report.
 
