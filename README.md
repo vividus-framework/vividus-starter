@@ -13,6 +13,10 @@ The purpose of this repository is to help users start creating automated tests u
     ```shell
     git clone --recursive https://github.com/vividus-framework/vividus-starter.git
     ```
+1. Set the BUILD_SYSTEM_ROOT environment variable
+    ```shell
+    export BUILD_SYSTEM_ROOT=/dir/where-you-cloned/vividus-starter/vividus-build-system
+    ```
 1. Go to the local directory with your cloned repository: 
     ```shell
     cd vividus-starter
@@ -21,6 +25,21 @@ The purpose of this repository is to help users start creating automated tests u
     ```shell
     ./gradlew runStories
     ```
+## How to view the test results
+1. At the end of any test run, vividus will give you a link to where the corresponding test result was published. It should look like this:
+    ```shell
+    2020-11-18 16:22:17,650 [main] INFO  org.vividus.bdd.report.allure.AllureReportGenerator - Allure report is successfully generated at: /dir/to/where/the/results-are-published/.out/vividus-demo/reports/allure
+    ```
+1. cd into the directory.
+    ```shell
+    cd /dir/to/where/the/results-are-published/.out/vividus-demo/reports/allure
+    ```
+1. Start a webserver of your choice, in the example below we are using a node webserver through port 3456
+    ```shell
+    ✔ ~/dir/to/where/the/results-are-published/.out/vividus-demo/reports/allure
+    $ http-server -p 3456
+    ```
+1. launch a browser, type localhost:3456 into the URL. If you followed the instructions perperly, you should see your report.
 
 ## How to create own test project using starter
 1. Login to Github: http://github.com. (Create a new account before if you don't have any)
