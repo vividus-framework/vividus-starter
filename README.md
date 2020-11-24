@@ -2,6 +2,17 @@
 
 The purpose of this repository is to help users start creating automated tests using Vividus.
 
+- [Prerequisites](#prerequisites)
+  * [Install Java](#install-java)
+- [How to run the existing tests](#how-to-run-the-existing-tests)
+- [How to view the test results](#how-to-view-the-test-results)
+- [How to create own test project using starter](#how-to-create-own-test-project-using-starter)
+- [How to use IDE for the tests development](#how-to-use-ide-for-the-tests-development)
+  * [Eclipse](#eclipse)
+    + [Prerequisites](#prerequisites-1)
+    + [Import the project](#import-the-project)
+- [Support](#support)
+
 ## Prerequisites
 ### Install Java
 1. The baseline is JDK 11. Latest [JDK 15](https://jdk.java.net/15/) is supported as well
