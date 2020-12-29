@@ -24,9 +24,9 @@ The purpose of this repository is to help users start creating automated tests u
     ```shell
     git clone --recursive https://github.com/vividus-framework/vividus-starter.git
     ```
-1. Set the BUILD_SYSTEM_ROOT environment variable
+1. Set the VIVIDUS_BUILD_SYSTEM_HOME environment variable
     ```shell
-    export BUILD_SYSTEM_ROOT=/dir/where-you-cloned/vividus-starter/vividus-build-system
+    export VIVIDUS_BUILD_SYSTEM_HOME=/dir/where-you-cloned/vividus-starter/vividus-build-system
     ```
 1. Go to the local directory with your cloned repository: 
     ```shell
