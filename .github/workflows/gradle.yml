@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [ 11, 15 ]
+    name: Java ${{ matrix.java }}
+    
+    steps:
+    - name: Checkout (including submodules)
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+
+    - name: Set up JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: ${{ matrix.java }}
+    
+    - name: Cache ~/.gradle/caches
+      uses: actions/cache@v2
+      with:
+        path: ~/.gradle/caches
+        key: ${{ runner.os }}-${{ matrix.java }}-gradle-caches-${{ hashFiles('**/*.gradle') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ matrix.java }}-gradle-caches-
+
+    - name: Cache ~/.gradle/wrapper
+      uses: actions/cache@v2
+      with:
+        path: ~/.gradle/wrapper
+        key: ${{ runner.os }}-${{ matrix.java }}-gradle-wrapper-${{ hashFiles('vividus-build-system/**/wrapper/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ matrix.java }}-gradle-wrapper-
+
+    - name: Build
+      run: ./gradlew build
