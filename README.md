@@ -3,6 +3,7 @@
 The purpose of this repository is to help users start creating automated tests using Vividus.
 
 - [Prerequisites](#prerequisites)
+  * [Install and configure Git](#install-and-configure-git)
   * [Install Java](#install-java)
 - [How to run the existing tests](#how-to-run-the-existing-tests)
 - [How to view the test results](#how-to-view-the-test-results)
@@ -14,10 +15,16 @@ The purpose of this repository is to help users start creating automated tests u
 - [Support](#support)
 
 ## Prerequisites
+### Install and configure Git
+1. Download and install [Git client](http://git-scm.com/downloads)
+1. [Configure](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity) your identity
+
 ### Install Java
-1. The baseline is JDK 11. Latest [JDK 15](https://jdk.java.net/15/) is supported as well
+1. The baseline is JDK 11. The latest [JDK 15](https://jdk.java.net/15/) is supported as well
 1. Configure `JAVA_HOME` environment variable
-1. Update `PATH` environment variable: add `$JAVA_HOME/bin`
+1. Update `PATH` environment variable: 
+    * Windows: add `%JAVA_HOME%/bin`
+    * macOS / Linux: add `$JAVA_HOME/bin`
 
 ## How to run the existing tests
 1. Clone the repository:
