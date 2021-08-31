@@ -1,27 +1,14 @@
 version: 2
 updates:
 - package-ecosystem: gradle
-  directory: "/"
+  directory: /
   schedule:
     interval: weekly
-    day: sunday
-    time: "02:00"
-  open-pull-requests-limit: 99
 - package-ecosystem: gitsubmodule
-  directory: "/"
+  directory: /
   schedule:
     interval: weekly
-    day: sunday
-    time: "02:00"
-  open-pull-requests-limit: 99
 - package-ecosystem: github-actions
-  directory: "/"
+  directory: /
   schedule:
     interval: weekly
-    day: sunday
-    time: "02:00"
-  open-pull-requests-limit: 99
-  reviewers:
-  - valfirst
-  - ikalinin1
-  - uarlouski
