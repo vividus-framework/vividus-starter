@@ -77,7 +77,7 @@ The purpose of this repository is to help users start creating automated tests u
 ## How to use IDE for the tests development
 ### Eclipse
 #### Prerequisites
-1. Install [Eclipse IDE 2021-09](https://www.eclipse.org/downloads/packages/release/2021-09/r/eclipse-ide-java-developers)
+1. Install [Eclipse IDE 2022-03](https://www.eclipse.org/downloads/packages/release/2022-03/r/eclipse-ide-java-developers)
 1. Add [JBehave plugin](https://jbehave.org/eclipse-integration.html)
 #### Import the project
 1. Go to the root directory of the test project
@@ -85,7 +85,7 @@ The purpose of this repository is to help users start creating automated tests u
     ```shell
     ./gradlew eclipse
     ```
-1. [Import the project to Eclipse](https://help.eclipse.org/2021-09/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm)
+1. [Import the project to Eclipse](https://help.eclipse.org/2022-03/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm)
 
 
 ## Support
