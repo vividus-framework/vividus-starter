@@ -20,7 +20,7 @@ The purpose of this repository is to help users start creating automated tests u
 1. [Configure](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_your_identity) your identity
 
 ### Install Java
-1. The baseline is JDK 11. The latest [JDK 17](https://jdk.java.net/17/) is supported as well
+1. The baseline is JDK 11. [LTS JDK 17](https://jdk.java.net/17/) and the latest [JDK 18](https://jdk.java.net/18/) are supported as well
 1. Configure `JAVA_HOME` environment variable
 1. Update `PATH` environment variable: 
     * Windows: add `%JAVA_HOME%/bin`
