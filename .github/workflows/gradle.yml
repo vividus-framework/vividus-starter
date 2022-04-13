@@ -1,4 +1,4 @@
-name: CI
+name: Build
 
 on:
   push:
@@ -12,11 +12,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        java: [ 11, 17, 18 ]
-    name: Java ${{ matrix.java }}
-    
+
     steps:
     - name: Checkout (including submodules)
       uses: actions/checkout@v3
@@ -27,7 +23,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
-        java-version: ${{ matrix.java }}
+        java-version: 17
         cache: 'gradle'
 
     - name: Build
