@@ -14,3 +14,6 @@
 #Build Dirs#
 output/
 .out/**
+
+# macOS system files
+.DS_Store
