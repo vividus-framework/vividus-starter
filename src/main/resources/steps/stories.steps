@@ -1,0 +1,11 @@
+Composite: When I login to the application
+When I wait until element located by `id(user)` appears
+When I add `${email}` to field located `id(user)`
+When I click on element located `id(login)`
+When I wait until element located by `id(password)` appears
+When I add `${password}` to field located `id(password)`
+When I click on element located `id(login-submit)`
+
+Composite: When board loaded without lists
+
+Composite: When I create new task in a list
