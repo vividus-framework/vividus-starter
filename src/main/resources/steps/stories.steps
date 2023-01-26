@@ -1,11 +1,52 @@
 Composite: When I login to the application
+When I click on element located by `xpath((//div/a[text()="Log in"])[1])`
 When I wait until element located by `id(user)` appears
 When I add `${email}` to field located `id(user)`
 When I click on element located `id(login)`
 When I wait until element located by `id(password)` appears
 When I add `${password}` to field located `id(password)`
 When I click on element located `id(login-submit)`
+When I wait until element located by `xpath(//button[contains(@class,"js-open-header-member-menu")])` appears
 
-Composite: When board loaded without lists
+Composite: When I log out from the application
+When I click on element located by `xpath(//button[contains(@class,"js-open-header-member-menu")])`
+When I wait until element located by `xpath(//h2[text()="Account"])` appears
+When I change context to element located `xpath(//section[@data-testid="header-member-menu-popover"])`
+When I click on element located by `xpath(//button/span[text()="Log out"])`
+When I wait until element located by `id(logout-submit)` appears
+When I click on element located by `id(logout-submit)`
+When I wait until element located by `xpath(//a[text()="Log in"])` appears
 
-Composite: When I create new task in a list
+Composite: When I create list with `$listTitle` if board loaded without lists
+When I change context to element located `xpath(//div[contains(@class,"js-add-list")])`
+When I find >= '1' elements by By.xpath(//a[contains(@class,"open-add-list")]) and for each element do
+|step																				|
+|When I click on element located by `xpath(//a[contains(@class,"open-add-list")])`	|
+When I wait until element located by `xpath(//input[@class="list-name-input"])` appears
+When I enter `<listTitle>` in field located by `xpath(//input[@class="list-name-input"])`
+When I wait until element located by `xpath(//input[@value="Add list"])` appears
+When I click on element located by `xpath(//input[@value="Add list"])`
+When I change context to element located `xpath(//div[contains(@class,"board-main-content")])`
+
+Composite: When I create card with `$cardTitle` in new board lists
+When I find >= '1' elements by By.xpath(//a[contains(@class,"open-card-composer")]) and for each element do
+|step																					|
+|When I click on element located by `xpath(//a[contains(@class,"open-card-composer")])`	|
+When I wait until element located by `xpath(//textarea[contains(@class,"js-card-title")])` appears
+When I enter `<cardTitle>` in field located by `xpath(//textarea[contains(@class,"js-card-title")])`
+When I click on element located by `xpath(//input[@value="Add card"])`
+When I wait until element located by `xpath(//span[contains(@class,"list-card-title")])` appears
+When I wait until element located by `xpath(//textarea[contains(@class,"js-card-title")])` appears
+When I click on element located by `xpath((//a[contains(@class,"icon-close")])[1])`
+When I wait until element located by `xpath(//textarea[contains(@class,"js-card-title")])` disappears
+When I change context to element located `xpath(//div[contains(@class,"board-main-content")])`
+
+Composite: When I verify user is not logged in
+Given I am on a page with the URL 'https://trello.com/u/${login}/boards'
+When I wait until the page title contains the text 'Error'
+Then the text 'This page may be private.' exists
+
+Composite: When I verify user is logged in
+Given I am on a page with the URL 'https://trello.com/u/${login}/boards'
+When I wait until the page title contains the text 'Boards'
+Then the text 'YOUR WORKSPACES' exists

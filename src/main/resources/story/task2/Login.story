@@ -2,22 +2,13 @@ Description: Scenarios for login
 
 Scenario: Successfull login
 Given I am on the main application page
-When I click on element located by `xpath((//div/a[text()="Log in"])[1])`
 When I login to the application
-Then the page with the URL containing '/boards' is loaded
+When I verify user is logged in
 
-Scenario: Verify user logged in
-
-Scenario: Sign out
+Scenario: Log out
 Given I am on the main application page
-When I click on element located by `xpath(//span[contains(@title,"Elena Capienko")])`
-When I wait until element located by `xpath(//h2[text()="Account"])` appears
-When I click on element located by `xpath(//button/span[text()="Log out"])`
-When I wait until element located by `id(logout-submit)` appears
-When I click on element located by `id(logout-submit)`
-Then the page with the URL containing '/home' is loaded
-
-Scenario: Verify user logged out
+When I log out from the application
+When I verify user is not logged in
 
 Scenario: Failed login - incorrect email
 Given I am on the main application page
@@ -30,8 +21,7 @@ When I wait until element located by `id(password)` appears
 When I add `${password}` to field located `id(password)`
 When I click on element located `xpath(//*[@id="login" or @id="login-submit"])`
 Then the text 'Incorrect email address and / or password.' exists
-
-Scenario: Verify user has not logged with incorrect email
+When I verify user is not logged in
 
 Scenario: Failed login - incorrect password
 Given I am on the main application page
@@ -44,5 +34,4 @@ When I wait until element located by `id(password)` appears
 When I add `#{generate(Internet.password)}` to field located `id(password)`
 When I click on element located `id(login-submit)`
 Then the text 'Incorrect email address and / or password.' exists
-
-Scenario: Verify user not logged with incorrect password
+When I verify user is not logged in
