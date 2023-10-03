@@ -5,10 +5,7 @@ ext.buildSystemPath = "${System.env.VIVIDUS_BUILD_SYSTEM_HOME?:buildSystemRootDi
 
 apply from: "${buildSystemPath}/vividus-test-project.gradle"
 
-ext {
-    vividusVersion = '0.5.13'
-}
-
 dependencies {
-    implementation(group: 'org.vividus', name: 'vividus', version: vividusVersion)
+    implementation platform(group: 'org.vividus', name: 'vividus-bom', version: '0.6.0')
+    implementation(group: 'org.vividus', name: 'vividus')
 }
